@@ -1,1 +1,1 @@
-export { IngredientsCategoryUI } from './ingredients-category';
+export { IngridCategoryUI } from './ingredients-category';

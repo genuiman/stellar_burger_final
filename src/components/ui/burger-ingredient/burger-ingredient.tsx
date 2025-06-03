@@ -8,9 +8,9 @@ import {
   AddButton
 } from '@zlden/react-developer-burger-ui-components';
 
-import { TBurgerIngredientUIProps } from './type';
+import { TBurgerIngridientUIProps } from './type';
 
-export const BurgerIngredientUI: FC<TBurgerIngredientUIProps> = memo(
+export const BurgerIngridientUI: FC<TBurgerIngridientUIProps> = memo(
   ({ ingredient, count, handleAdd, locationState }) => {
     const { image, price, name, _id } = ingredient;
 
@@ -20,6 +20,7 @@ export const BurgerIngredientUI: FC<TBurgerIngredientUIProps> = memo(
           className={styles.article}
           to={`/ingredients/${_id}`}
           state={locationState}
+          data-cy='ingredient-item'
         >
           {count && <Counter count={count} />}
           <img className={styles.img} src={image} alt='картинка ингредиента.' />

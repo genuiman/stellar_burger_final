@@ -1,4 +1,4 @@
-export type FeedInfoUIProps = {
+export type FeedInformUIProps = {
   feed: any;
   readyOrders: number[];
   pendingOrders: number[];
