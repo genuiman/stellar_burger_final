@@ -17,7 +17,7 @@ type Story = StoryObj<typeof meta>;
 
 export const DefaultOrderCard: Story = {
   args: {
-    orderInfo: {
+    OrderInformation: {
       ingredientsInfo: [
         {
           _id: '111',

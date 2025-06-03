@@ -1,7 +1,7 @@
 import { RefObject } from 'react';
 import { TIngredient, TTabMode } from '@utils-types';
 
-export type BurgerIngredientsUIProps = {
+export type BurgerIngridientsUIProps = {
   currentTab: TTabMode;
   buns: TIngredient[];
   mains: TIngredient[];

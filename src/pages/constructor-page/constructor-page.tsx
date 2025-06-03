@@ -1,15 +1,16 @@
-import { useSelector } from '../../services/store';
-
 import styles from './constructor-page.module.css';
 
-import { BurgerIngredients } from '../../components';
-import { BurgerConstructor } from '../../components';
-import { Preloader } from '../../components/ui';
+import { BurgerIngridients } from '@components';
+import { BurgerConstructor } from '@components';
+import { Preloader } from '@ui';
 import { FC } from 'react';
+import { useSelector } from '@store';
+import { getIngredientsStateSelector } from '@slices';
 
-export const ConstructorPage: FC = () => {
-  /** TODO: взять переменную из стора */
-  const isIngredientsLoading = false;
+export const ConstrPage: FC = () => {
+  const isIngredientsLoading = useSelector(
+    getIngredientsStateSelector
+  ).isLoading;
 
   return (
     <>
@@ -23,7 +24,7 @@ export const ConstructorPage: FC = () => {
             Соберите бургер
           </h1>
           <div className={`${styles.main} pl-5 pr-5`}>
-            <BurgerIngredients />
+            <BurgerIngridients />
             <BurgerConstructor />
           </div>
         </main>

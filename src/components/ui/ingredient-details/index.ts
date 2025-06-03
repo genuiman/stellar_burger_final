@@ -1,1 +1,1 @@
-export { IngredientDetailsUI } from './ingredient-details';
+export { IngridDetailUI } from './ingredient-details';

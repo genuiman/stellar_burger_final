@@ -1,21 +1,21 @@
-import { FeedInfoUI } from '@ui';
+import { FeedInformUI } from '@ui';
 import type { Meta, StoryObj } from '@storybook/react';
 
 const meta = {
-  title: 'Example/FeedInfo',
-  component: FeedInfoUI,
+  title: 'Example/FeedInform',
+  component: FeedInformUI,
   // This component will have an automatically generated Autodocs entry: https://storybook.js.org/docs/writing-docs/autodocs
   tags: ['autodocs'],
   parameters: {
     // More on how to position stories at: https://storybook.js.org/docs/configure/story-layout
     layout: 'fullscreen'
   }
-} satisfies Meta<typeof FeedInfoUI>;
+} satisfies Meta<typeof FeedInformUI>;
 
 export default meta;
 type Story = StoryObj<typeof meta>;
 
-export const DefaultFeedInfo: Story = {
+export const DefaultFeedInform: Story = {
   args: {
     feed: {
       orders: [

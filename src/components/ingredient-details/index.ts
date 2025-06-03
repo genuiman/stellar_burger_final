@@ -1,1 +1,1 @@
-export { IngredientDetails } from './ingredient-details';
+export { IngridDetail } from './ingredient-details';

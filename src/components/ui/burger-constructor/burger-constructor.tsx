@@ -7,7 +7,7 @@ import {
 import styles from './burger-constructor.module.css';
 import { BurgerConstructorUIProps } from './type';
 import { TConstructorIngredient } from '@utils-types';
-import { BurgerConstructorElement, Modal } from '@components';
+import { BurgerConstructorItem, Modal } from '@components';
 import { Preloader, OrderDetailsUI } from '@ui';
 
 export const BurgerConstructorUI: FC<BurgerConstructorUIProps> = ({
@@ -18,9 +18,9 @@ export const BurgerConstructorUI: FC<BurgerConstructorUIProps> = ({
   onOrderClick,
   closeOrderModal
 }) => (
-  <section className={styles.burger_constructor}>
+  <section className={styles.burger_constructor} data-cy='constructor'>
     {constructorItems.bun ? (
-      <div className={`${styles.element} mb-4 mr-4`}>
+      <div className={`${styles.element} mb-4 mr-4`} data-cy='constructor-bun'>
         <ConstructorElement
           type='top'
           isLocked
@@ -40,7 +40,7 @@ export const BurgerConstructorUI: FC<BurgerConstructorUIProps> = ({
       {constructorItems.ingredients.length > 0 ? (
         constructorItems.ingredients.map(
           (item: TConstructorIngredient, index: number) => (
-            <BurgerConstructorElement
+            <BurgerConstructorItem
               ingredient={item}
               index={index}
               totalItems={constructorItems.ingredients.length}

@@ -1,1 +1,1 @@
-export { BurgerConstructorElement } from './burger-constructor-element';
+export { BurgerConstructorItem } from './burger-constructor-element';
